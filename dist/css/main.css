@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: 60rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 30rem;
+      grid-template-rows: 30rem;
+  position: relative;
+}
+
+.container .container__item {
+  padding: 2.5rem;
+}
+
+.container .container__item .title {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+@media screen and (max-width: 840px) {
+  .container .container__item .title {
+    font-size: 2rem;
+  }
+}
+
+.container .container__item .description, .container .container__item .btn {
+  font-family: 'Lexend Deca', sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 840px) {
+  .container .container__item .description, .container .container__item .btn {
+    font-size: 0.8rem;
+  }
+}
+
+.container .container__item .title, .container .container__item .description {
+  margin-top: 2rem;
+}
+
+.container .container__item .btn {
+  padding: 0.5rem 1.5rem;
+  border: 0px;
+  border-radius: 3rem;
+  position: absolute;
+  bottom: 10%;
+}
+
+@media screen and (max-width: 840px) {
+  .container .container__item .btn {
+    margin-top: 2rem;
+    bottom: 0%;
+    position: relative;
+  }
+}
+
+.container .container__item .btn:hover {
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
+  outline: none;
+}
+
+.container .container__item .btn:focus {
+  outline: none;
+}
+
+.container .sedans {
+  background-color: #e38826;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.container .sedans .btn {
+  color: #e38826;
+}
+
+.container .sedans .btn:hover {
+  background-color: #e38826;
+}
+
+.container .suvs {
+  background-color: #006970;
+}
+
+.container .suvs .btn {
+  color: #006970;
+}
+
+.container .suvs .btn:hover {
+  background-color: #006970;
+}
+
+.container .luxury {
+  background-color: #004241;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.container .luxury .btn {
+  color: #004241;
+}
+
+.container .luxury .btn:hover {
+  background-color: #004241;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    width: 50rem;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .container {
+    width: 300px;
+    -ms-grid-columns: 300px;
+        grid-template-columns: 300px;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .container .luxury {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .container .sedans {
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

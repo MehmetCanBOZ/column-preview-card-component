@@ -1,0 +1,108 @@
+@import './reset';
+
+.container{
+    width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30rem;
+    position: relative;
+    #{&}__item{
+        padding: 2.5rem;
+        .title{
+            font-family: 'Big Shoulders Display', cursive;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color:white;
+            @media screen and (max-width:840px) {
+                font-size: 2rem;
+            }
+        }
+        .description,.btn{
+            font-family: 'Lexend Deca', sans-serif;
+            color: $transparentwhite;
+            @media screen and (max-width:840px) {
+                font-size: 0.8rem;
+            }
+        }
+        .title,.description{
+            margin-top: 2rem;
+          
+        }
+
+        .btn{
+            padding: 0.5rem 1.5rem;
+            border: 0px;
+            border-radius: 3rem;
+            position: absolute;
+            bottom: 10%;
+            @media screen and (max-width:840px) {
+                  margin-top: 2rem;
+                  bottom: 0%;
+                  position: relative;
+            }
+        }
+        .btn:hover{
+            border: 1px solid $verylightgray;
+           color: $verylightgray;
+            outline: none;
+        }
+        .btn:focus{
+            outline: none;
+        }
+       
+    }
+    .sedans{
+        background-color: $brightorange;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        .btn{
+            color:$brightorange;
+        }
+        .btn:hover{
+            background-color:$brightorange ;
+        }
+        
+    }
+    .suvs{
+        background-color: $darcyan;
+        .btn{
+            color:$darcyan;
+        }
+        .btn:hover{
+            background-color:$darcyan ;
+        }
+    }
+    .luxury{
+        background-color: $verydarkcyan;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        .btn{
+            color:$verydarkcyan;
+        }
+        .btn:hover{
+            background-color:$verydarkcyan ;
+        }
+
+    }
+
+    @media screen and (max-width:960px) {
+        width: 50rem;
+    }
+    @media screen and (max-width:840px) {
+        width: 300px;
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(3, 1fr);
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        .luxury{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+        .sedans{
+            border-bottom-left-radius: 0rem;
+            border-top-right-radius: 0.5rem;
+        }
+    }
+}
